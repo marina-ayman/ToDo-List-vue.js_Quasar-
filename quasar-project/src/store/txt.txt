@@ -1,0 +1,96 @@
+import { createStore } from 'vuex';
+
+const store = createStore({
+  state: {
+    tasks: [
+      { id: 1, name: 'Go to shop', completed: false, dueDate: '2025/4/12', dueTime: '14:30' },
+      { id: 2, name: 'Go to park', completed: true, dueDate: '2025/4/13', dueTime: '16:00' },
+      { id: 3, name: 'Finish homework', completed: false, dueDate: '2025/5/01', dueTime: '10:00' }
+    ]
+  },
+  mutations: {
+    // toggleCompletion(state, taskId) {
+    //   const task = state.tasks.find(t => t.id === taskId);
+    //   if (task) {
+    //     task.completed = !task.completed;
+    //   }
+    // },
+    // addTask(state, newTask) {
+    //   state.tasks.push(newTask);
+    // }
+  },
+  actions: {
+    // toggleTaskCompletion({ commit }, taskId) {
+    //   commit('toggleCompletion', taskId);
+    // },
+    // addNewTask({ commit }, newTask) {
+    //   commit('addTask', newTask);
+    // }
+  },
+  getters: {
+    // getTasks: state => state.tasks
+  }
+});
+
+export default store;
+
+
+
+
+// شرح الملف:
+//****  state ****: 
+//  يحتوي على البيانات الخاصة بالتطبيق (في هذه الحالة، قائمة بالمهام).
+//**** mutations ****: 
+// يحتوي على التعديلات المباشرة على البيانات. مثلًا: toggleCompletion لتغيير حالة المهمة.
+//**** actions ****:
+//  تحتوي على الوظائف التي تستدعي mutations ويمكن أن تحتوي على عمليات غير متزامنة.
+//**** getters ****:
+//  للوصول إلى البيانات بشكل أكثر تنظيماً، مثلًا للحصول على المهام من state.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const store = createStore({
+//   modules: {
+//     storeTasks
+//   },
+//   state: {
+//     // حالتك العامة
+//     appTitle: 'My Quasar bbbb App'
+//   },
+//   mutations: {
+//     // تعديل الحالة العامة
+//     setAppTitle(state, title) {
+//       state.appTitle = title;
+//     }
+//   },
+//   actions: {
+//     // القيام بمهام غير متزامنة
+//     updateAppTitle({ commit }, title) {
+//       commit('setAppTitle', title);
+//     }
+//   },
+//   getters: {
+//     appTitle: (state) => state.appTitle
+//   }
+// });

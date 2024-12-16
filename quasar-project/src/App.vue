@@ -2,6 +2,15 @@
   <router-view />
 </template>
 
-<script setup>
-//
+<script>
+
+export default {
+ 
+};
 </script>
+
+<style>
+.text-strikethrough {
+  text-decoration: line-through;
+}
+</style>
